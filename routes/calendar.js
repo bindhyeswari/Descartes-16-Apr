@@ -3,13 +3,19 @@
 var express = require('express');
 var router = express.Router();
 var mongoose = require('mongoose');
+var Schema = mongoose.Schema;
+
+var ContactSchema = new Schema({
+
+});
+
 
 
 mongoose.connect('mongodb://localhost/test', function (err) {
     console.log(err);
 });
 
-var ContactModel = mongoose.Model('contact', {
+var ContactModel = mongoose.model('contact', {
     name: {
         type: String,
         required: true
